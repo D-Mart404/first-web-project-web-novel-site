@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webnovel</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url(bg.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .menu {
+        display: inline-block;
+        margin-top: 20px;
+    }
+    .logo img{
+        width: 100px;
+        margin: 8px 0;
+    }
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu ul li {
+        display: inline-block;
+        position: relative;
+    }
+    .menu ul li a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #333;
+    }
+    .menu ul li:hover {
+        background-color: #ccc;
+    }
+    .menu ul li:hover > ul {
+        display: block;
+    }
+    .menu ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .menu ul ul li {
+        display: block;
+    }
+    .menu ul ul li a {
+        padding: 10px 15px;
+    }
+    .menu-heading {
+        margin-bottom: 20px;
+    }
+    .icon {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    h1 {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .left {
+        display: flex; 
+        align-items: center; 
+        text-align: center; 
+    }
+    th {
+        color: white;
+        background-color: rgb(57, 56, 56);
+        border-radius: 10px;
+        padding: 10px;
+    }
+    img {
+        transition: transform 0.3s;
+    }
+    table img:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    table div.left img:hover {
+        transform: none;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    }
+
+
+    form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 50%; 
+    margin: 0 auto;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  textarea {
+    resize: vertical; 
+  }
+
+  button[type="submit"] {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px;
+  }
+
+  div.error {
+    color: red;
+  }
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="menu-heading">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <h1>Webnovel</h1>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="signin.html">Sign-In</a></li>
+            <li><a href="#">Ranking</a>
+                <ul>
+                    <li><a href="rankrate.html">Rating</a></li>
+                    <li><a href="rankview.html">Views</a></li>
+                    <li><a href="ranktrend.html">Trending</a></li>
+                </ul>
+            </li>
+            <li><a href="#3">Genres</a></li>
+            <li><a href="#2">Feed back</a></li>
+            <li><a href="#1">Completed novels</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+<hr>
+<br>
+<table  width="85%" align="center">
+    <tr>
+        <td rowspan="2" style="width: 28%; text-align: center;;">
+            "Discover the latest treasures in our collection of new and popular novels! Dive into captivating worlds, where every turn of the page unveils thrilling adventures, heartwarming romances, and gripping mysteries. From fantasy realms filled with magic and mythical creatures to futuristic dystopias brimming with technological marvels, our new arrivals showcase a diverse range of genres to satisfy every reader's craving. Explore bestsellers that have captured the hearts of readers worldwide and uncover hidden gems waiting to be discovered. With fresh updates and exciting chapters released regularly, there's always something exciting to delve into on our webnovel platform."
+        </td>
+        <td rowspan="2" style="width: 2%;"></td>
+        <td style="width: 17.5%; text-align: center;"><a href="#"><img src="image/arrival_1.jpg" style="width: 80%; height: 190px; text-align: center">The_Giver</a></td>
+        <td style="width: 17.5%; text-align: center;"><a href="#"><img src="image/arrival_2.jpg" style="width: 80%; height: 190px; text-align: center">Wright Brothers</a></td>
+        <td style="width: 17.5%; text-align: center;"><a href="#"><img src="image/arrival_3.jpg" style="width: 80%; height: 190px; text-align: center">Radical Gardening</a></td>
+        <td style="width: 17.5%; text-align: center;"><a href="#"><img src="image/arrival_4.jpg" style="width: 80%; height: 190px; text-align: center">Red_Queen</a></td>
+    </tr>
+    <tr>
+        <td style="width: 17.5%; text-align: center;"><a href="#"><img src="image/arrival_5.jpg" style="width: 80%; height: 190px; text-align: center">Harper Lee</a></td>
+        <td style="width: 17.5%; text-align: center;"><a href="#"><img src="image/arrival_6.jpg" style="width: 80%; height: 190px; text-align: center">Harry_Potter</a></td>
+        <td style="width: 17.5%; text-align: center;"><a href="#"><img src="image/arrival_7.jpg" style="width: 80%; height: 190px; text-align: center">Heroes of Olympus</a></td>
+        <td style="width: 17.5%; text-align: center;"><a href="#"><img src="image/arrival_9.jpg" style="width: 80%; height: 190px; text-align: center">Rangers Apperentice</a></td>
+    </tr>
+</table>
+<br>
+<hr>
+<br>
+<table id="3" width="85%" align="center">
+    <tr>
+        <th style="text-align: left;"><strong>Fantasy</strong></th>
+        <th style="text-align: left;"><strong>Realistiic</strong></th>
+        <th style="text-align: left;"><strong>Horror</strong></th>
+        <th style="text-align: left;"><strong>Sci-Fi</strong></th>
+        <th style="text-align: left;"><strong>Romance</strong></th>
+    </tr>
+    <tr>
+        <td><a href="#"><div class="left"><img src="image/book_1.jpg" style="width: 26%; height: 60px; text-align: center"><p>Cocogoose</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/book_2.jpg" style="width: 26%; height: 60px; text-align: center"><p>SubletteD</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/book_3.jpg" style="width: 26%; height: 60px; text-align: center"><p>Wesipart</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/book_4.jpg" style="width: 26%; height: 60px; text-align: center"><p>Beautiful</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/book_5.jpg" style="width: 26%; height: 60px; text-align: center"><p>Clever_Lands</p></div></a></td>
+    </tr>
+    <tr>
+        <td><a href="#"><div class="left"><img src="image/book_6.jpg" style="width: 26%; height: 60px; text-align: center"><p>Shattered</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/book_7.png" style="width: 26%; height: 60px; text-align: center"><p>The_Art_City</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/book_8.png" style="width: 26%; height: 60px; text-align: center"><p>Music-Rock</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/book_9.jpg" style="width: 26%; height: 60px; text-align: center"><p>Free-Fall</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/book_11.jpg" style="width: 26%; height: 60px; text-align: center"><p>Boring Girls</p></div></a></td>
+    </tr>
+    <tr>
+        <td><a href="#"><div class="left"><img src="image/arrival_1.jpg" style="width: 26%; height: 60px; text-align: center"><p>The_Giver</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/arrival_2.jpg" style="width: 26%; height: 60px; text-align: center"><p>Wright Brothers</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/arrival_3.jpg" style="width: 26%; height: 60px; text-align: center"><p>Radical Gardening</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/arrival_4.jpg" style="width: 26%; height: 60px; text-align: center"><p>Red_Queen</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/arrival_5.jpg" style="width: 26%; height: 60px; text-align: center"><p>Harper Lee</p></div></a></td>
+    </tr>
+    <tr>
+        <td><a href="#"><div class="left"><img src="image/arrival_6.jpg" style="width: 26%; height: 60px; text-align: center"><p>Harry_Potter</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/arrival_7.jpg" style="width: 26%; height: 60px; text-align: center"><p>Heroes of Olympus</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/arrival_9.jpg" style="width: 26%; height: 60px; text-align: center"><p>Rangers Apperentice</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/arrival_10.jpg" style="width: 26%; height: 60px; text-align: center"><p>Percy_Jackson</p></div></a></td>
+        <td><a href="#"><div class="left"><img src="image/arrival_8.webp" style="width: 26%; height: 60px; text-align: center"><p>Wimpy_Kid</p></div></a></td>
+    </tr>
+</table>
+<br>
+<hr>
+<br>
+<table id="1" width="85%" align="center">
+    <tr><td colspan="2" ><p style="font-size:larger;"><strong>Completed Novels</p></td></tr>
+    <tr>
+        <td style="width: 10%;"><a href="#"><img src="image/book_1.jpg" style="width: 75%; height: 100px; display: block; margin: 0 auto;"><p style="text-align: center;">Cocogoose</p></a></td>
+        <td style="width: 10%;"><a href="#"><img src="image/book_2.jpg" style="width: 75%; height: 100px; display: block; margin: 0 auto;"><p style="text-align: center;">SubletteD</p></a></td>
+        <td style="width: 10%;"><a href="#"><img src="image/book_3.jpg" style="width: 75%; height: 100px; display: block; margin: 0 auto;"><p style="text-align: center;">Wesipart</p></a></td>
+        <td style="width: 10%;"><a href="#"><img src="image/book_4.jpg" style="width: 75%; height: 100px; display: block; margin: 0 auto;"><p style="text-align: center;">Beautiful</p></a></td>
+        <td style="width: 10%;"><a href="#"><img src="image/book_10.png" style="width: 85%; height: 100px; display: block; margin: 0 auto;"><p style="text-align: center;">Samp_Test</p></a></td>
+        <td style="width: 10%;"><a href="#"><img src="image/book_11.jpg" style="width: 75%; height: 100px; display: block; margin: 0 auto;"><p style="text-align: center;">Boring Girls</p></a></td>
+        <td style="width: 10%;"><a href="#"><img src="image/book_12.png" style="width: 85%; height: 100px; display: block; margin: 0 auto;"><p style="text-align: center;">Thanks in Everything</p></a></td>
+        <td style="width: 10%;"><a href="#"><img src="image/book_13.png" style="width: 85%; height: 100px; display: block; margin: 0 auto;"><p style="text-align: center;">The_Hands</p></a></td>
+        <td style="width: 10%;"><a href="#"><img src="image/book_14.png" style="width: 85%; height: 100px; display: block; margin: 0 auto;"><p style="text-align: center;">Light_House</p></a></td>
+        <td style="width: 10%;"><a href="#"><img src="image/book_15.png" style="width: 85%; height: 100px; display: block; margin: 0 auto;"><p style="text-align: center;">Back_History_Month</p></a></td>
+    </tr>
+</table>
+<br>
+<hr>
+<br>
+<form id="2" style="border: 2px solid #ccc; background-color: #f5f5f5 ;  border-radius: 5px;">
+    <h2>Feedback Form</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required><br>
+    <div class="error" id="n"></div>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required><br>
+    <div class="error" id="e"></div>
+    <br>
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback" name="feedback" rows="5" placeholder="Write your feedback here..." required></textarea><br>
+    <div class="error" id="t"></div>
+    <br>
+    <button type="submit" onclick="valid()">Submit Feedback</button>
+  </form>
+  <br>
+  <hr>
+
+  <footer style="background-color: #f2f2f2; padding: 15px; text-align: center;">
+    <p>&copy; 2024 All Rights Reserved</p>
+    <pre>Phone no. 1xxxxxxxx      Email: xxxxx@gmail.com</pre>
+  </footer>
+
+  <script>
+    function valid(){
+        var txt1 = document.getElementById("name").value;
+        var p2= "^[A-Za-z][A-Za-z0-9]*@[A-Za-z]+[\.][A-Za-z]+";
+        var regex2 =  new RegExp(p2);
+        var txt2 = document.getElementById("email").value;
+        var txt3 = document.getElementById("feedback").value;
+        document.getElementById("n").innerHTML = "";
+        document.getElementById("e").innerHTML = "";
+        document.getElementById("t").innerHTML = "";
+        if(txt1==""){
+            document.getElementById("n").innerHTML="*enter name<br>";
+        }
+        if(txt2==""){
+            document.getElementById("e").innerHTML="*enter email<br>";
+        }
+        else {
+            if(regex2.test(txt2))
+            {
+            alert("Valid email");
+            }
+            else
+            {
+            alert("Invalid email should be of like abc123@gmail.com type of format");
+            document.getElementById("e").innerHTML="*invalid email<br>";
+            }
+        }
+        if(txt3==""){
+            document.getElementById("t").innerHTML="*enter feedback<br>";
+        }
+    }
+</script>
+  
+</body>
+</html>

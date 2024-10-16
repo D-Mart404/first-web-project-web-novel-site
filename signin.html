@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signin</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url(bg.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .menu {
+        display: inline-block;
+        margin-top: 20px;
+    }
+    .logo img{
+        width: 100px;
+        margin: 8px 0;
+    }
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu ul li {
+        display: inline-block;
+        position: relative;
+    }
+    .menu ul li a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #333;
+    }
+    .menu ul li:hover {
+        background-color: #ccc;
+    }
+    .menu ul li:hover > ul {
+        display: block;
+    }
+    .menu ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .menu ul ul li {
+        display: block;
+    }
+    .menu ul ul li a {
+        padding: 10px 15px;
+    }
+    .menu-heading {
+        margin-bottom: 20px;
+    }
+    .icon {
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    
+
+
+    .container2 {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    width: 33%;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+  }
+
+  .button {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #3e8e41;
+  }
+
+  div.error {
+    color: red;
+  }
+
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="menu-heading">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <h1>Webnovel</h1>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="signin.html">Sign-In</a></li>
+            <li><a href="#">Ranking</a>
+                <ul>
+                    <li><a href="rankrate.html">Rating</a></li>
+                    <li><a href="rankview.html">Views</a></li>
+                    <li><a href="ranktrend.html">Trending</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#3">Genres</a></li>
+            <li><a href="index.html#2">Feed back</a></li>
+            <li><a href="index.html#1">Completed novels</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+<hr>
+<br>
+
+
+<div class="container2">
+    <h2>Sign In</h2>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <div class="error" id="t"></div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <div class="error" id="e"></div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <div class="error" id="p"></div>
+        <button type="submit" class="button" onclick="valid()">Sign In</button>
+    </form>
+</div>
+
+
+<br>
+<br>
+<hr>
+
+
+<footer style="background-color: #f2f2f2; padding: 15px; text-align: center;">
+    <p>&copy; 2024 All Rights Reserved</p>
+    <pre>Phone no. 1xxxxxxxx      Email: xxxxx@gmail.com</pre>
+</footer>
+
+<script>
+    function valid(){
+        var txt1 = document.getElementById("username").value;
+        var p1= "^[A-Za-z][A-Za-z0-9_]*$";
+        var regex1 =  new RegExp(p1);
+        var p2= "^[A-Za-z][A-Za-z0-9]*@[A-Za-z]+[\.][A-Za-z]+";
+        var regex2 =  new RegExp(p2);
+        var txt2 = document.getElementById("email").value;
+        var txt3 = document.getElementById("password").value;
+        document.getElementById("t").innerHTML = "";
+        document.getElementById("e").innerHTML = "";
+        document.getElementById("p").innerHTML = "";
+        if(txt1==""){
+            document.getElementById("t").innerHTML="*enter username<br>";
+        }
+        else {
+            if(regex1.test(txt1))
+            {
+            alert("Valid username");
+            }
+            else
+            {
+            alert("Invalid username should contain only letters, numbers, and underscores, with the first character being a letter");
+            }
+        }
+        if(txt2==""){
+            document.getElementById("e").innerHTML="*enter email<br>";
+        }
+        else {
+            if(regex2.test(txt2))
+            {
+            alert("Valid email");
+            }
+            else
+            {
+            alert("Invalid email should be of like abc123@gmail.com type of format");
+            document.getElementById("e").innerHTML="*invalid email<br>";
+            }
+        }
+        if(txt3==""){
+            document.getElementById("p").innerHTML="*enter password<br>";
+        }
+    }
+</script>
+  
+</body>
+</html>
